@@ -1,11 +1,12 @@
 import { Image, StyleSheet, Platform } from 'react-native';
-
+import { useAppContext } from "../../context/AppContext";
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-export default function HomeScreen() {
+export default function HomeScreen() {    
+  const { stateValue, updateValue } = useAppContext();
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
